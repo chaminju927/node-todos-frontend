@@ -47,14 +47,14 @@ const TodoItem = ({ item, getTasks }) => {
               className="button-delete"
               onClick={(event) => deleteTask(event)}
             >
-              삭제
+              Delete
             </button>
             <button
               id={item._id}
               className="button-delete"
               onClick={(event) => putTask(event)}
             >
-              {isComplete ? "끝남" : "안끝남"}
+              {isComplete ? "Done" : "Yet"}
             </button>
           </div>
         </div>
