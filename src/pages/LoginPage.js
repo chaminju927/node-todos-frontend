@@ -17,6 +17,7 @@ const LoginPage = () => {
     try {
       const response = await api.post("/user/login", { email, password });
       if (response.status === 200) {
+        console.log(response);
         setUser(response.data.user);
         // 세션스토리지에 토큰 저장
         sessionStorage.setItem("token", response.data.token);
