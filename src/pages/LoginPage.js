@@ -64,7 +64,7 @@ const LoginPage = () => {
             Login
           </Button>
           <span>
-            계정이 없다면? <Link to="/register">회원가입 하기</Link>
+            계정이 없다면? <Link to="/register">회원가입</Link>
           </span>
         </div>
       </Form>

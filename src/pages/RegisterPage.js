@@ -15,8 +15,11 @@ const RegisterPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault(); //refresh 방지
     try {
+      if (email === "" || name === "") {
+        throw new Error("이메일과 이름은 필수 입력값 입니다.");
+      }
       if (password !== secPassword) {
-        throw new Error("wrong password");
+        throw new Error("비밀번호를 확인해주세요.");
       }
       const response = await api.post("/user", { name, email, password });
       if (response.status === 200) {
