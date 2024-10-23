@@ -18,6 +18,9 @@ const RegisterPage = () => {
       if (email === "" || name === "") {
         throw new Error("이메일과 이름은 필수 입력값 입니다.");
       }
+      if(password === "") {
+        throw new Error("비밀번호를 입력해주세요.")
+      }
       if (password !== secPassword) {
         throw new Error("비밀번호를 확인해주세요.");
       }

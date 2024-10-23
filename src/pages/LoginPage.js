@@ -15,6 +15,9 @@ const LoginPage = () => {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
+      if (password === "" || email === "") {
+        throw new Error("이메일과 비밀번호를 모두 입력해주세요.");
+      }
       const response = await api.post("/user/login", { email, password });
       if (response.status === 200) {
         console.log(response);
